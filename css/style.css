@@ -1,0 +1,36 @@
+body{
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(46, 44, 44);
+    margin: 0;
+    padding:20px;
+}
+
+header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: rgb(100, 81, 56);
+}
+
+h2{
+    color:rgb(95, 78, 50);
+
+}
+
+ul{
+    list-style-type:square;
+}
+
+.photo {
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.photo img{
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #8b6f6f;
+}
