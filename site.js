@@ -12,3 +12,5 @@ if (isMorning) {
 } else {
     welcomeDiv.textContent = "Good evening!";
 }
+
+localStorage.setItem("It's a secret to everybody.","This is my secret message!")
