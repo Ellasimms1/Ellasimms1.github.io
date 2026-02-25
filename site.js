@@ -53,3 +53,37 @@ setInterval(() => {
     currentImage++
     showImages()
 }, 5000)
+
+
+const todoList = document.querySelector('.todo-list')
+const input = document.querySelector('#new-todo') 
+const button = document.querySelector('button')
+
+// Get the list from local storage
+const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+
+//function called renderTodos
+const renderTodos = () => {
+    todoList.innerHTML = ''
+    todos.forEach(todo => {
+        const li = document.createElement('li')
+        li.textContent = todo.text
+        todoList.append(li)
+    })
+}
+
+//add item when button is clicked 
+button.addEventListener('click', () => {
+    if (input.value.trim() === '') return
+
+    // Add a new item to the list
+    todos.push({ text: input.value, completed: false })
+
+// Save the list to local storage
+localStorage.setItem('todo-list', JSON.stringify(todos))
+input.value = ''
+
+renderTodos();
+})
+
+renderTodos();

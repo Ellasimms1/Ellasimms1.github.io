@@ -58,3 +58,8 @@ ul{
     gap: 10px;
     margin-top: 10px;
 }
+
+#new-todo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
