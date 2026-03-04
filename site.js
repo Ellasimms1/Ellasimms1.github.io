@@ -87,3 +87,27 @@ renderTodos();
 })
 
 renderTodos();
+
+//random pokemon
+const getRandomPokemon = async () => {
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+};
+const renderPokemon = (pokemon) => {
+    const container = document.getElementById("random-pokemon");
+    container.innerHTML = ""
+
+    const img = document.createElement("img");
+    img.src = pokemon.sprites.front_default;
+    img.alt = pokemon.name;
+    container.appendChild(img);
+};
+
+const main = async () => {
+    const pokemon = await getRandomPokemon();
+    renderPokemon(pokemon);
+};
+
+main();
